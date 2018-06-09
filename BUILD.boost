@@ -467,7 +467,7 @@ boost_library(
 boost_library(
     name = "filesystem",
     copts = [
-        "-Wno-deprecated-declarations",
+        
     ],
     deps = [
         ":config",

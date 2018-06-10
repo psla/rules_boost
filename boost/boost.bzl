@@ -86,7 +86,7 @@ def boost_deps():
         url = "http://www.bzip.org/1.0.6/bzip2-1.0.6.tar.gz",
     )
 
-  if "org_lzma_lzma" not in native.existing_rules():
+  if "xz" not in native.existing_rules():
     native.git_repository(
       name = "xz",
       remote = "https://github.com/BonsaiAI/xz-bazel.git",

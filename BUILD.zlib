@@ -39,7 +39,7 @@ cc_library(
     copts = [
         "-DUNALIGNED_OK",
         "-DEXPAND_INSERT_STRING",
-        "-Wno-implicit-function-declaration",
+        # "-Wno-implicit-function-declaration", # -W flags not supported in VSCC
     ],
     includes = ["."],
     visibility = ["//visibility:public"],

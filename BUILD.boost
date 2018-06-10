@@ -714,7 +714,7 @@ boost_library(
         ":utility",
         "@net_zlib_zlib//:zlib",
         "@org_bzip_bzip2//:bz2lib",
-        "@org_lzma_lzma//:lzma",
+        "@xz//:xz",
     ],
 )
 

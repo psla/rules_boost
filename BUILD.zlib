@@ -8,7 +8,7 @@ cc_library(
     srcs = [
         "adler32.c",
         "compress.c",
-        "contrib/amd64/amd64-match.S",
+        # "contrib/amd64/amd64-match.S", # causes ' in cc_library rule @net_zlib_zlib//:zlib: Expected action_config for 'preprocess-assemble' to be configured'
         "crc32.c",
         "crc32.h",
         "deflate.c",

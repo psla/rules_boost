@@ -87,24 +87,10 @@ def boost_deps():
     )
 
   if "org_lzma_lzma" not in native.existing_rules():
-    native.new_http_archive(
-        name = "org_lzma_lzma",
-        build_file = "@com_github_nelhage_rules_boost//:BUILD.lzma",
-        sha256 = "71928b357d0a09a12a4b4c5fafca8c31c19b0e7d3b8ebb19622e96f26dbf28cb",
-        strip_prefix = "xz-5.2.3",
-        urls = [
-          "https://phoenixnap.dl.sourceforge.net/project/lzmautils/xz-5.2.3.tar.gz",
-          "https://newcontinuum.dl.sourceforge.net/project/lzmautils/xz-5.2.3.tar.gz",
-          "http://cfhcable.dl.sourceforge.net/project/lzmautils/xz-5.2.3.tar.gz",
-          "https://superb-sea2.dl.sourceforge.net/project/lzmautils/xz-5.2.3.tar.gz",
-          "https://cytranet.dl.sourceforge.net/project/lzmautils/xz-5.2.3.tar.gz",
-          "https://iweb.dl.sourceforge.net/project/lzmautils/xz-5.2.3.tar.gz",
-          "https://gigenet.dl.sourceforge.net/project/lzmautils/xz-5.2.3.tar.gz",
-          "https://ayera.dl.sourceforge.net/project/lzmautils/xz-5.2.3.tar.gz",
-          "https://astuteinternet.dl.sourceforge.net/project/lzmautils/xz-5.2.3.tar.gz",
-          "https://pilotfiber.dl.sourceforge.net/project/lzmautils/xz-5.2.3.tar.gz",
-          "https://svwh.dl.sourceforge.net/project/lzmautils/xz-5.2.3.tar.gz",
-        ]
+    native.git_repository(
+      name = "xz",
+      remote = "https://github.com/BonsaiAI/xz-bazel.git",
+      tag = "r5.2.3-v02",
     )
 
   if "boost" not in native.existing_rules():
